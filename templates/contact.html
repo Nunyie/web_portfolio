@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro Page</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("static/images/bg7.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 6em;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.274);
+      margin-bottom: 10px;
+      margin-top: -20px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px; /* space between icon & text */
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000000;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    a img {
+      width: 35px;
+      height: 35px;    
+    }
+
+    a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contacts</h1>
+
+  <div class="button-container">
+    <a href="mailto:roswellbunag05@gmail.com" title="Mail me">
+      <img src="static/images/mailicon.png" alt="Mail Icon">
+      E-Mail
+    </a>
+    <a href="https://github.com/Nunyie/web_portfolio" title="Go to My GitHub">
+      <img src="static/images/githubicon.png" alt="GitHub Icon">
+      GitHub
+    </a>
+    <a href="" title="Phone Number">
+      <img src="static/images/phoneicon.jpg">
+      +63 916-693-2856
+    </a>
+  </div>
+  <a href="/homepage" title="Back to Homepage">Homepage</a>
+</body>
+</html>

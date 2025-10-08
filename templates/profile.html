@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Profile Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro Page</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;     
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+
+      /* Background image setup */
+      background-image: url("static/images/bg7.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative; /* needed for absolute positioning later */
+    }
+    .content {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    transform: translateY(-60px);
+    }
+
+
+    /* Center Content */
+    .content {
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    h1 {
+      font-size: 7em;
+      margin-bottom: 0px;
+    }
+    h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 2em;
+      max-width: 1000px;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    /* Homepage button at bottom center */
+    .homepage-btn {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000000;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+
+    .homepage-btn:hover {
+      background-color: #969696;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <h1><b><i><center>Welcome to my Profile Page</center></i></b></h1>
-    <hr>
-    <p>This is a simple profile page rendered using Flask's templating.</p>
-    <p>Create your profile here with Name, section , course, subject and display your favorite sayings or motto! using html tags </p>
+  <div class="content">
+    <h1>Profile</h1>
+    <h2>BSCpE 2-2</h2>
+    <p>Live, Laugh, Love.
+    <br>Strive for progress, not perfection.
+    </p>
+  </div>
+  <a href="/homepage" class="homepage-btn">Homepage</a>
 </body>
 </html>

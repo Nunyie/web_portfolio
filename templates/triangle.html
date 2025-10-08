@@ -20,7 +20,7 @@
     h1 {
       font-size: 5em;
       color: #ffffff;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       margin-top: -30px;
     }   
     form {
@@ -28,6 +28,7 @@
       padding: 20px 30px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
     }
     label, input {
       display: block;
@@ -48,6 +49,21 @@
     input[type="submit"]:hover {
       background: #45a049;
     }
+    a {
+      text-decoration: none;
+      background-color: rgb(255, 255, 255);
+      color: #000000;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;;
+    }
+
+    a:hover {
+      background-color: #a0a0a0ef;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -61,10 +77,10 @@
     <input type="number" id="height" name="height" required>
 
     <input type="submit" value="Calculate">
-  </form>
-
   {% if result is not none %}
   <p>Area of Triangle: {{ result }}</p>
   {% endif %}
+  </form>
+  <a href="/works" title="Back to Works">Back</a>
 </body>
 </html>
