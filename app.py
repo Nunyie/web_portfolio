@@ -14,6 +14,10 @@ def index():
 def profile():
     return render_template('profile.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/works', methods=['GET', 'POST'])
 def works():
     result = None
@@ -28,7 +32,7 @@ def touppercase():
     if request.method == 'POST':
         input_string = request.form.get('inputString', '')
         result = input_string.upper()
-    return render_template('touppercase.html', result=result)
+    return render_template('toUpperCase.html', result=result)
 
 
 @app.route('/works/area/circle', methods=['GET', 'POST'])
@@ -47,10 +51,6 @@ def atriangle():
         height = request.form.get('height', '')
         result = (int(width)*int(height))*.5
     return render_template('triangle.html', result=result)
-
-@app.route('/contact')
-def contact():
-    return "Contact Page. please create me an html page with dummy contact info"
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Area of Circle</title>
+  <title>Area of Triangle</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
       color: #ffffff;
       margin-bottom: 40px;
       margin-top: -30px;
-    }
+    }   
     form {
       background: #fff;
       padding: 20px 30px;
@@ -51,15 +51,20 @@
   </style>
 </head>
 <body>
-  <h1>Area of Circle</h1>
+  <h1>Area of Triangle</h1>
 
-  <form action="/works/area/circle" method="post">
-        <label for="radius">Radius:</label>
-        <input type="number" id="radius" name="radius" required >
-        <input type="submit" value="Calculate">
+  <form action="/works/area/triangle" method="post">
+    <label for="width">Base:</label>
+    <input type="number" id="width" name="width" required>
+
+    <label for="height">Height:</label>
+    <input type="number" id="height" name="height" required>
+
+    <input type="submit" value="Calculate">
+  </form>
 
   {% if result is not none %}
-  <p>Area of Circle: {{ result }}</p>
+  <p>Area of Triangle: {{ result }}</p>
   {% endif %}
 </body>
 </html>

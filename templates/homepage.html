@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro Page</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("static/images/bg4.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 6em;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.274);
+      margin-bottom: 40px;
+      margin-top: -30px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px; /* space between icon & text */
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000000;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+    }
+
+    a img {
+      width: 35px;
+      height: 35px;
+    }
+
+    a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Homepage</h1>
+
+  <div class="button-container">
+    <a href="/profile" title="Go to Profile Page">
+      <img src="static/images/engicon.jpg" alt="Profile">
+      Profile
+    </a>
+    <a href="/works" title="Go to Works Page">
+      <img src="static/images/wrenchicon.jpg"">
+      Works
+    </a>
+    <a href="/contact" title="Go to Contact Page">
+      <img src="static/images/phoneicon.jpg">
+      Contact
+    </a>
+  </div>
+</body>
+</html>
