@@ -8,8 +8,8 @@
 
     <form action="/works/area/circle" method="post">
         <label for="radius">Enter a string:</label>
-        <input type="int" id="radius" name="radius">
-        <input type="submit" value="Convert">
+        <input type="number" id="radius" name="radius" required >
+        <input type="submit" value="Calculate">
     </form>
 
     {% if result %}
