@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area of Circle</title>
+</head>
+<body>
+    <h1>Area of Circle</h1>
+
+    <form action="/works/area/circle" method="post">
+        <label for="radius">Enter a string:</label>
+        <input type="int" id="radius" name="radius">
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if result %}
+    <p>Area of Circle: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
