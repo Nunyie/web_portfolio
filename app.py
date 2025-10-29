@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from infix_to_postfix import infix_to_postfix
 
 app = Flask(__name__)
 
@@ -52,7 +53,7 @@ def atriangle():
     return render_template('triangle.html', result=result)
 
 @app.route('/works/infix_to_postfix', methods=['GET', 'POST'])
-def infix_to_postfix():
+def infix_to_postfix_route():
     result = None
     if request.method == 'POST':
         infix = request.form.get('infix')
