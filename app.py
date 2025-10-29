@@ -52,7 +52,7 @@ def atriangle():
     return render_template('triangle.html', result=result)
 
 @app.route('/works/infix_to_postfix', methods=['GET', 'POST'])
-def infix_to_postfix_route():
+def infix_to_postfix():
     result = None
     if request.method == 'POST':
         infix = request.form.get('infix')
