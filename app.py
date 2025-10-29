@@ -34,7 +34,6 @@ def touppercase():
         result = input_string.upper()
     return render_template('toUpperCase.html', result=result)
 
-
 @app.route('/works/area/circle', methods=['GET', 'POST'])
 def acircle():
     result = None
@@ -51,6 +50,18 @@ def atriangle():
         height = request.form.get('height', '')
         result = (int(width)*int(height))*.5
     return render_template('triangle.html', result=result)
+
+@app.route('/works/infix_to_postfix', methods=['GET', 'POST'])
+def infix_to_postfix_route():
+    result = None
+    if request.method == 'POST':
+        infix = request.form.get('infix')
+        if infix:
+            try:
+                result = infix_to_postfix(infix)
+            except Exception as e:
+                result = f"Error: {str(e)}"
+    return render_template('infix_to_postfix.html', result=result)
 
 if __name__ == "__main__":
     app.run(debug=True)

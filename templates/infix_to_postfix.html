@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Area of Circle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: url("{{ url_for('static', filename='images/bg6.png') }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    h1 {
+      font-size: 5em;
+      color: #ffffff;
+      margin-bottom: 20px;
+      margin-top: -30px;
+    }
+    form {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      padding: 8px;
+      width: 200px;
+    }
+    input[type="submit"] {
+      padding: 8px 20px;
+      border: none;
+      background: #4CAF50;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #45a049;
+    }
+    a {
+      text-decoration: none;
+      background-color: rgb(255, 255, 255);
+      color: #000000;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      background-color: #a0a0a0ef;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Infix to Postfix Converter</h1>
+
+  <form action="/works/infix_to_postfix" method="post">
+    <label for="infix">Infix Expression:</label>
+    <input type="text" id="infix" name="infix" required>
+    <input type="submit" value="Convert">
+
+  {% if result is not none %}
+  <p>Postfix Expression: {{ result }}</p>
+  {% endif %}
+  </form>
+  <a href="/works" title="Back to Works">Back</a>
+</body>
+</html>
